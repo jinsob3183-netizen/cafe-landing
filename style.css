@@ -1,0 +1,95 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  background: #f7f2ea;
+  color: #3b2a20;
+  line-height: 1.6;
+}
+
+/* 상단 메뉴 */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: rgba(74, 52, 38, 0.95);
+}
+.nav a { color: #fff8ef; text-decoration: none; }
+.logo { font-weight: 700; }
+.nav-links { display: flex; gap: 20px; font-size: 15px; }
+.nav-links a { opacity: 0.85; }
+.nav-links a:hover { opacity: 1; }
+
+/* 첫 화면 */
+.hero {
+  padding: 96px 24px;
+  text-align: center;
+  background: #4a3426;
+  color: #fff8ef;
+}
+.eyebrow { letter-spacing: 4px; font-size: 13px; opacity: 0.7; }
+.hero h1 { font-size: 48px; margin: 8px 0; }
+.lead { font-size: 18px; opacity: 0.9; }
+
+#menuBtn {
+  margin-top: 28px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 999px;
+  background: #e0a96d;
+  color: #3b2a20;
+  font-size: 16px;
+  cursor: pointer;
+}
+#menuBtn:hover { background: #ebbb85; }
+
+/* 소개 */
+.about { max-width: 960px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+.about h2 { margin-bottom: 32px; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.features article {
+  padding: 28px 20px;
+  background: #fffaf3;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(59, 42, 32, 0.06);
+}
+.features h3 { margin-bottom: 8px; color: #8a5a35; }
+
+/* 메뉴 */
+.menu { max-width: 480px; margin: 0 auto 48px; padding: 0 24px; }
+.menu h2 { margin-bottom: 16px; }
+.menu li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 12px 0;
+  border-bottom: 1px dashed #c9b8a6;
+}
+.hidden { display: none; }
+
+/* 영업 정보 */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 24px;
+  text-align: center;
+  background: #efe5d8;
+}
+
+footer { text-align: center; padding: 24px; font-size: 13px; opacity: 0.6; }
+
+/* 모바일 */
+@media (max-width: 640px) {
+  .nav-links { gap: 14px; font-size: 14px; }
+  .hero { padding: 72px 16px; }
+  .hero h1 { font-size: 36px; }
+  .features { grid-template-columns: 1fr; }
+  .info { flex-direction: column; gap: 24px; }
+}
